@@ -1,0 +1,48 @@
+// Step 1: Create a variable to hold your NFTs
+let nfts = [];
+
+// Step 2: Implement the mintNFT function
+function mintNFT(t, c, date, d) {
+    // Create an NFT object with the provided metadata
+    const nft = {
+        title: t,
+        creator: c,
+        creationDate: date,
+        details: d
+    };
+    
+    // Store the NFT in the nfts array
+    nfts.push(nft);
+}
+
+// Step 3: Implement the listNFTs function
+function listNFTs() {
+    // Loop through the nfts array and print each NFT's metadata
+    for (let i = 0; i < nfts.length; i++) {
+        console.log("Title: " + nfts[i].title);
+        console.log("Creator: " + nfts[i].creator);
+        console.log("Creation Date: " + nfts[i].creationDate);
+        console.log("Details: " + nfts[i].details);
+        
+    }
+}
+
+// Step 4: Implement the getTotalSupply function
+function getTotalSupply() {
+    // Return the number of NFTs in the nfts array
+    return nfts.length;
+}
+
+// Call your functions below this line
+
+// Mint some NFTs with Indian cultural values
+mintNFT("Rangoli Art", "Anjali Sharma", "2024-05-29", "A vibrant Rangoli design made with colored powders for Diwali.");
+mintNFT("Classical Dance", "Rajesh Kumar", "2024-05-30", "A depiction of the classical Bharatanatyam dance form.");
+mintNFT("Festive Lights", "Priya Menon", "2024-05-31", "An illustration of beautifully lit lamps during Karthigai Deepam.");
+mintNFT("Traditional Music", "Vikram Patel", "2024-06-01", "An artwork showcasing classical Indian musical instruments like sitar and tabla.");
+
+// List all NFTs
+listNFTs();
+
+// Print the total number of NFTs minted
+console.log("Total Supply: " + getTotalSupply());
